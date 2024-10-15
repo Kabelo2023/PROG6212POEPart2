@@ -1,0 +1,26 @@
+﻿<Window x:Class="ClaimsManagementSystem.ClaimVerification"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Verify Claims" Height="400" Width="600">
+    <Grid>
+        <ListView x:Name="ClaimsListView" SelectionChanged="ClaimsListView_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Lecturer" Width="120" DisplayMemberBinding="{Binding LecturerName}" />
+                    <GridViewColumn Header="Hours Worked" Width="100" DisplayMemberBinding="{Binding HoursWorked}" />
+                    <GridViewColumn Header="Status" Width="80" DisplayMemberBinding="{Binding Status}" />
+                    <GridViewColumn Header="Actions" Width="120">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Content="Approve" Click="Approve_Click" />
+                                    <Button Content="Reject" Click="Reject_Click" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

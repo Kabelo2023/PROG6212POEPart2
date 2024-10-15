@@ -1,0 +1,26 @@
+﻿<Window x:Class="ClaimsManagementSystem.ClaimSubmission"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Submit Claim" Height="300" Width="400">
+    <Grid>
+        <StackPanel Margin="20">
+            <Label Content="Lecturer Name:" />
+            <TextBox x:Name="LecturerNameTextBox" />
+
+            <Label Content="Hours Worked:" />
+            <TextBox x:Name="HoursWorkedTextBox" />
+
+            <Label Content="Hourly Rate:" />
+            <TextBox x:Name="HourlyRateTextBox" />
+
+            <Label Content="Additional Notes:" />
+            <TextBox x:Name="NotesTextBox" AcceptsReturn="True" Height="60" />
+
+            <Label Content="Upload Supporting Document:" />
+            <Button Content="Upload" Click="UploadButton_Click" />
+            <TextBlock x:Name="UploadedFileName" />
+
+            <Button Content="Submit Claim" Click="SubmitClaim_Click" Margin="0,20,0,0" />
+        </StackPanel>
+    </Grid>
+</Window>
